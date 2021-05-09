@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     width: "100%",
     display: "flex",
     flexDirection: "row",
-    borderWidth: 1,
     padding: 20,
   },
   image: {
@@ -31,7 +30,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  textContainer: {},
   title: {
     color: colors.black,
     marginBottom: 5,
