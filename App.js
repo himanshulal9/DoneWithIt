@@ -1,12 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+// import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text> from bundling kuch v likeh ge na woo yhe mobile me dikhe gaa </Text>
-      <StatusBar style="auto" />
+      <ViewImageScreen />
     </View>
   );
 }
@@ -14,8 +14,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
