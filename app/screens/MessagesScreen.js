@@ -5,18 +5,18 @@ import Screen from "../components/Screen";
 
 const messages = [
   {
-    id: 1,
+    id: "1",
     title: "title1",
     description: "description1",
     image: require("../assets/mosh.jpg"),
   },
   {
-    id: 2,
+    id: "2",
     title: "title2",
     description: "description2",
     image: require("../assets/mosh.jpg"),
   },
-];
+],
 
 function MessagesScreen(props) {
   return (
@@ -24,7 +24,7 @@ function MessagesScreen(props) {
       <FlatList
         data={messages}
         keyExtractor={(message) => message.id}
-        renderItem={(item) => (
+        renderItem={({item}) => (
           <ListItem
             image={item.image}
             title={item.title}
