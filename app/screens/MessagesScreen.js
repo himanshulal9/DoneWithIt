@@ -3,28 +3,27 @@ import { FlatList } from "react-native";
 import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
 
-const messages = [
-  {
-    id: "1",
-    title: "title1",
-    description: "description1",
-    image: require("../assets/mosh.jpg"),
-  },
-  {
-    id: "2",
-    title: "title2",
-    description: "description2",
-    image: require("../assets/mosh.jpg"),
-  },
-],
-
-function MessagesScreen(props) {
+export default function MessagesScreen() {
+  const messages = [
+    {
+      id: 1,
+      title: "T1",
+      description: "D1",
+      image: require("../assets/mosh.jpg"),
+    },
+    {
+      id: 2,
+      title: "T2",
+      description: "D2",
+      image: require("../assets/mosh.jpg"),
+    },
+  ];
   return (
     <Screen>
       <FlatList
         data={messages}
-        keyExtractor={(message) => message.id}
-        renderItem={({item}) => (
+        keyExtractor={(messages) => messages.id.toString()}
+        renderItem={({ item }) => (
           <ListItem
             image={item.image}
             title={item.title}
@@ -35,5 +34,3 @@ function MessagesScreen(props) {
     </Screen>
   );
 }
-
-export default MessagesScreen;
