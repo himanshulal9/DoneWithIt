@@ -1,7 +1,9 @@
 import React from "react";
-import { FlatList } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import ListItem from "../components/ListItem";
+import ListItemSeprator from "../components/ListItemSeprator";
 import Screen from "../components/Screen";
+import colors from "../config/colors";
 
 export default function MessagesScreen() {
   const messages = [
@@ -30,7 +32,15 @@ export default function MessagesScreen() {
             subTitle={item.description}
           />
         )}
+        ItemSeparatorComponent={ListItemSeprator}
       />
     </Screen>
   );
 }
+const styles = StyleSheet.create({
+  line: {
+    width: "100%",
+    height: "5px",
+    backgroundColor: colors.secondary,
+  },
+});
